@@ -1,0 +1,26 @@
+.links {
+    margin-top: var(--spacing-half);
+
+    li {
+        display: inline-block;
+        margin-right: var(--spacing-half);
+
+        a {
+            align-items: center;
+            display: flex;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.icon {
+    fill: var(--color-not-black);
+    height: 20px;
+    margin-left: var(--spacing-quarter);
+    transition: all 200ms ease;
+    width: 20px;
+}

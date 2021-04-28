@@ -1,0 +1,39 @@
+{
+    "Main": {
+        "nav": {
+            "type": "Group",
+            "config": {
+                "fields": {
+                    "link_text": {
+                        "type": "Text",
+                        "config": {
+                            "label": "Link text"
+                        }
+                    },
+                    "link": {
+                        "type": "Link",
+                        "config": {
+                            "label": "Link"
+                        }
+                    },
+                    "has_plain_styling": {
+                        "type": "Boolean",
+                        "config": {
+                            "default_value": false,
+                            "label": "Has plain styling"
+                        }
+                    }
+                },
+                "label": "Nav"
+            }
+        }
+    },
+    "Meta": {
+        "uid": {
+            "type": "UID",
+            "config": {
+                "label": "UID"
+            }
+        }
+    }
+}

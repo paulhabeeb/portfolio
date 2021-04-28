@@ -1,0 +1,135 @@
+@import url("https://use.typekit.net/nwv5srn.css");
+
+:root {
+    --color-white: #ffffff;
+    --color-lightest-grey: #fafafa;
+    --color-lighter-grey: #f1f1f1;
+    --color-light-grey: #e1e1e1;
+    --color-medium-grey: #979797;
+    --color-dark-grey: #545454;
+    --color-not-black: #222222;
+    --color-burgundy: #148424;
+    --color-gold-light: #ac8301;
+    --color-primary: var(--color-burgundy);
+    --color-secondary: var(--color-dark-grey);
+    --color-secondary-light: #6e6e6e;
+    --font-sans: neue-haas-unica, "Neue Haas Unica", "IBM Plex Sans", sans-serif;
+    --font-mono: interstate-mono, Menlo, Courier, monospace;
+    --font-size-larger: 48px;
+    --font-size-large: 32px;
+    --font-size-medium: 20px;
+    --font-size-normal: 18px;
+    --font-size-small: 14px;
+    --font-size-smaller: 12px;
+    --font-weight-sans-normal: 400;
+    --font-weight-sans-bold: 700;
+    --font-weight-sans-black: 800;
+    --spacing-triple: 4.5rem;
+    --spacing-double: 3rem;
+    --spacing-single: 1.5rem;
+    --spacing-two-thirds: 1rem;
+    --spacing-half: .75rem;
+    --spacing-third: .5rem;
+    --spacing-quarter: .375rem;
+    --spacing-sixth: .25rem;
+    --spacing-eighth: .1875rem;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    color: var(--color-not-black);
+    font-family: var(--font-sans);
+    line-height: 1.5;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: var(--font-weight-sans-bold);
+    line-height: 1.2;
+}
+
+a {
+    color: var(--color-primary);
+    font-weight: var(--font-weight-sans-bold);
+    text-decoration: underline;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+button {
+    background: 0 0;
+    border: 0;
+    cursor: pointer;
+    -webkit-appearance: button;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+input, textarea, button {
+    box-sizing: border-box;
+    font-family: var(--font-sans);
+}
+
+img {
+    height: auto;
+    width: 100%;
+}
+
+.visuallyHidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}

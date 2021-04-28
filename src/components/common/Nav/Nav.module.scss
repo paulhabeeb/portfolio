@@ -1,0 +1,19 @@
+.nav {
+    ul {
+        font-weight: var(--font-weight-sans-bold);
+        margin: 0 auto;
+        max-width: 800px;
+        padding: var(--spacing-quarter) var(--spacing-single);
+        width: 100%;
+    }
+}
+
+.navItem {
+    display: inline-block;
+    margin-right: var(--spacing-single);
+
+    &.plainLink a {
+        color: var(--color-not-black);
+        text-decoration: none;
+    }
+}

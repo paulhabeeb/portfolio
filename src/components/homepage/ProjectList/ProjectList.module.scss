@@ -1,0 +1,23 @@
+.projectList {
+    margin-top: var(--spacing-double);
+}
+
+.title {
+    font-size: var(--font-size-medium);
+}
+
+.project {
+    font-size: var(--font-size-large);
+
+    h2 {
+        display: inline;
+    }
+
+    a {
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

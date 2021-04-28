@@ -1,0 +1,14 @@
+.imageSlice {
+    margin: var(--spacing-double) var(--spacing-single);
+}
+
+.image {
+    box-shadow: 0 0 15px 0 rgba(30, 30, 30, 0.2);
+}
+
+.figcaption {
+    color: var(--color-dark-grey);
+    font-size: var(--font-size-small);
+    margin-top: var(--spacing-half);
+    text-align: center;
+}
