@@ -51,6 +51,18 @@
             "config": {
                 "label": "UID"
             }
+        },
+        "meta_title": {
+            "type": "Text",
+            "config": {
+                "label": "Meta Title"
+            }
+        },
+        "meta_description": {
+            "type": "Text",
+            "config": {
+                "label": "Meta Description"
+            }
         }
     }
 }

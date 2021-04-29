@@ -14,12 +14,23 @@ export default function Project({ data }) {
         github_link,
         live_button_text,
         live_link,
+        meta_description,
+        meta_title,
         name,
     } = data.prismicProject.data
 
     return (
         <Layout>
-            <PageHeader description={description} title={name}>
+            <PageHeader
+                description={description}
+                doc={{
+                    type: data.prismicProject.type,
+                    uid: data.prismicProject.uid,
+                }}
+                metaDescription={meta_description}
+                metaTitle={meta_title}
+                title={name}
+            >
                 <HeaderLinks
                     githubButtonText={github_button_text}
                     githubLink={github_link}
@@ -45,9 +56,6 @@ export const query = graphql`
     query ProjectPageQuery($uid: String!) {
         prismicProject(uid: { eq: $uid }) {
             data {
-                name {
-                    raw
-                }
                 body {
                     ... on PrismicProjectBodyText {
                         id
@@ -62,12 +70,28 @@ export const query = graphql`
                         id
                         items {
                             image {
-                                url
-                                dimensions {
-                                    height
-                                    width
-                                }
                                 alt
+                                dimensions {
+                                    ...ImageDimensionsFragment
+                                }
+                                url
+                                thumbnails {
+                                    xl {
+                                        ...ThumbnailFragment
+                                    }
+                                    l {
+                                        ...ThumbnailFragment
+                                    }
+                                    m {
+                                        ...ThumbnailFragment
+                                    }
+                                    s {
+                                        ...ThumbnailFragment
+                                    }
+                                    xs {
+                                        ...ThumbnailFragment
+                                    }
+                                }
                             }
                             image_caption {
                                 raw
@@ -92,7 +116,26 @@ export const query = graphql`
                     link_type
                     url
                 }
+                meta_description
+                meta_title
+                name {
+                    raw
+                }
             }
+            type
+            uid
+        }
+    }
+
+    fragment ImageDimensionsFragment on PrismicImageDimensionsType {
+        height
+        width
+    }
+
+    fragment ThumbnailFragment on PrismicImageThumbnailType {
+        url
+        dimensions {
+            ...ImageDimensionsFragment
         }
     }
 `

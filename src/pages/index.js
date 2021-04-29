@@ -6,11 +6,26 @@ import { Layout, PageHeader } from '@components/common'
 import { ProjectList } from '@components/homepage'
 
 export default function Home({ data }) {
-    const { body, description, title } = data.prismicHomepage.data
+    const {
+        body,
+        description,
+        meta_description,
+        meta_title,
+        title,
+    } = data.prismicHomepage.data
 
     return (
         <Layout showNav={false}>
-            <PageHeader description={description} title={title} />
+            <PageHeader
+                description={description}
+                doc={{
+                    type: data.prismicHomepage.type,
+                    uid: data.prismicHomepage.uid,
+                }}
+                metaDescription={meta_description}
+                metaTitle={meta_title}
+                title={title}
+            />
             <main>
                 <ProjectList projects={body} />
             </main>
@@ -55,7 +70,11 @@ export const query = graphql`
                 description {
                     raw
                 }
+                meta_description
+                meta_title
             }
+            type
+            uid
         }
     }
 `
