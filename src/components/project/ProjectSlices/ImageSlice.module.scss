@@ -3,12 +3,14 @@
 .imageSlice {
     display: flex;
     flex-direction: column;
-    grid-gap: var(--spacing-double);
-    margin: var(--spacing-double) var(--spacing-single);
 
     @include breakpoint('medium') {
         flex-direction: row;
     }
+}
+
+.figure {
+    margin: var(--spacing-double) var(--spacing-single) 0;
 }
 
 .image {

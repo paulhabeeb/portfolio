@@ -19,7 +19,7 @@ const ImageSliceFigure = forwardRef(({ caption, handleClick, image }, ref) => {
     `
 
     return (
-        <figure>
+        <figure className={styles.figure}>
             <div
                 onClick={handleClick}
                 onKeyPress={handleClick}
@@ -104,8 +104,10 @@ function InlineImage({ caption, image }) {
     const [coords, setCoords] = useState(null)
 
     const handleOpen = () => {
-        setIsOpen(true)
-        setCoords(imageRef.current.getBoundingClientRect())
+        if (/Mobi/i.test(navigator.userAgent)) {
+            setIsOpen(true)
+            setCoords(imageRef.current.getBoundingClientRect())
+        }
     }
 
     const handleClose = () => setIsOpen(false)
