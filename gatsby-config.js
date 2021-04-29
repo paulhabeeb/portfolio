@@ -1,13 +1,7 @@
 module.exports = {
-    siteMetadata: {
-        title: 'Portfolio',
-    },
     plugins: [
-        'gatsby-plugin-image',
         'gatsby-plugin-preload-fonts',
         'gatsby-plugin-react-helmet',
-        'gatsby-plugin-sharp',
-        'gatsby-transformer-sharp',
         {
             resolve: 'gatsby-plugin-postcss',
             options: {
