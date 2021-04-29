@@ -19,7 +19,8 @@
         margin-bottom: var(--spacing-half);
     }
 
-    p + h2 {
+    p + h2,
+    p + h3 {
         margin-top: var(--spacing-single);
     }
 }
