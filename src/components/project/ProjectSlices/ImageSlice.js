@@ -19,7 +19,7 @@ const ImageSliceFigure = forwardRef(({ caption, handleClick, image }, ref) => {
     `
 
     return (
-        <figure className={styles.figure}>
+        <figure>
             <div
                 onClick={handleClick}
                 onKeyPress={handleClick}
@@ -86,7 +86,13 @@ function ImageModal({ caption, coords, handleClick, image }) {
                 className={overlay}
                 onClick={handleClick}
                 onKeyPress={handleClick}
-            />
+                role='button'
+                tabIndex={0}
+            >
+                <button className={styles.close} type='button'>
+                    &times;
+                </button>
+            </div>
         </>
     )
 }
@@ -114,12 +120,14 @@ function InlineImage({ caption, image }) {
 
     return (
         <>
-            <ImageSliceFigure
-                caption={caption}
-                handleClick={handleOpen}
-                image={image}
-                ref={imageRef}
-            />
+            <div className={styles.inlineImageWrapper}>
+                <ImageSliceFigure
+                    caption={caption}
+                    handleClick={handleOpen}
+                    image={image}
+                    ref={imageRef}
+                />
+            </div>
             {isOpen && (
                 <ImageModal
                     caption={caption}

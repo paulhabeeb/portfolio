@@ -9,7 +9,7 @@
     }
 }
 
-.figure {
+.inlineImageWrapper {
     margin: var(--spacing-double) var(--spacing-single) 0;
 }
 
@@ -66,6 +66,20 @@
 
     &.overlayIsShown {
         opacity: 1;
+    }
+}
+
+.close {
+    color: var(--color-white);
+    font-size: var(--font-size-large);
+    padding: 0;
+    position: fixed;
+    right: var(--spacing-half);
+    top: 0;
+    transition: color 200ms ease;
+
+    &:hover {
+        color: var(--color-medium-grey);
     }
 }
 
