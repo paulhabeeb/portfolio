@@ -1,26 +1,18 @@
-@import url("https://use.typekit.net/nwv5srn.css");
-
 :root {
     --color-white: #ffffff;
     --color-lightest-grey: #fafafa;
-    --color-lighter-grey: #f1f1f1;
     --color-light-grey: #e1e1e1;
     --color-medium-grey: #979797;
     --color-dark-grey: #545454;
     --color-not-black: #222222;
-    --color-burgundy: #148424;
-    --color-gold-light: #ac8301;
-    --color-primary: var(--color-burgundy);
-    --color-secondary: var(--color-dark-grey);
-    --color-secondary-light: #6e6e6e;
-    --font-sans: neue-haas-unica, "Neue Haas Unica", "IBM Plex Sans", sans-serif;
+    --color-primary: #148424;
+    --font-sans: neue-haas-unica, "Neue Haas Unica", "Proxima Nova", Helvetica, Arial, sans-serif;
     --font-mono: interstate-mono, Menlo, Courier, monospace;
     --font-size-larger: 48px;
     --font-size-large: 32px;
     --font-size-medium: 20px;
     --font-size-normal: 18px;
     --font-size-small: 14px;
-    --font-size-smaller: 12px;
     --font-weight-sans-normal: 400;
     --font-weight-sans-bold: 700;
     --font-weight-sans-black: 800;
