@@ -1,7 +1,9 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+import { RichText } from 'prismic-reactjs'
 
+import * as styles from './about.module.scss'
 import { Layout, PageHeader } from '@components/common'
 
 export default function About({ data }) {
@@ -15,7 +17,6 @@ export default function About({ data }) {
     return (
         <Layout>
             <PageHeader
-                description={description}
                 doc={{
                     type: data.prismicAbout.type,
                     uid: data.prismicAbout.uid,
@@ -24,6 +25,9 @@ export default function About({ data }) {
                 metaTitle={meta_title}
                 title={title}
             />
+            <main className={styles.main}>
+                <RichText render={description.raw} />
+            </main>
         </Layout>
     )
 }

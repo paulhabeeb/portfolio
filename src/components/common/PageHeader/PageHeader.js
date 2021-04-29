@@ -27,12 +27,14 @@ export default function PageHeader({
                     serializeHyperlink={linkResolver}
                 />
             </div>
-            <div className={styles.description}>
-                <RichText
-                    render={description.raw}
-                    serializeHyperlink={linkResolver}
-                />
-            </div>
+            {description && (
+                <div className={styles.description}>
+                    <RichText
+                        render={description.raw}
+                        serializeHyperlink={linkResolver}
+                    />
+                </div>
+            )}
             {children}
         </header>
     )

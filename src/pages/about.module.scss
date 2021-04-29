@@ -1,0 +1,13 @@
+.main {
+    font-size: var(--font-size-medium);
+    margin-top: var(--spacing-single);
+
+    h2 {
+        margin-bottom: var(--spacing-third);
+        margin-top: var(--spacing-single);
+    }
+
+    p + p {
+        margin-top: var(--spacing-single);
+    }
+}
