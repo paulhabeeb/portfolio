@@ -30,6 +30,7 @@ module.exports = {
                     about: require('./src/schemas/about.json'),
                     homepage: require('./src/schemas/homepage.json'),
                     nav: require('./src/schemas/nav.json'),
+                    page_not_found: require('./src/schemas/page_not_found.json'),
                     project: require('./src/schemas/project.json'),
                 },
             },

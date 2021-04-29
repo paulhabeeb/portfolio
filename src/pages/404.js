@@ -1,54 +1,46 @@
-import * as React from "react"
-import { Link } from "gatsby"
+import * as React from 'react'
+import PropTypes from 'prop-types'
+import { graphql } from 'gatsby'
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
+import { Layout, PageHeader } from '@components/common'
 
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
+export default function NotFoundPage({ data }) {
+    const {
+        description,
+        meta_description,
+        meta_title,
+        title,
+    } = data.prismicPageNotFound.data
 
-// markup
-const NotFoundPage = () => {
-  return (
-    <main style={pageStyles}>
-      <title>Not found</title>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry{" "}
-        <span role="img" aria-label="Pensive emoji">
-          😔
-        </span>{" "}
-        we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
-  )
+    return (
+        <Layout>
+            <PageHeader
+                description={description}
+                metaDescription={meta_description}
+                metaTitle={meta_title}
+                title={title}
+            />
+        </Layout>
+    )
 }
 
-export default NotFoundPage
+NotFoundPage.propTypes = {
+    data: PropTypes.object,
+}
+
+export const query = graphql`
+    query PageNotFoundQuery {
+        prismicPageNotFound(uid: { eq: "page-not-found" }) {
+            data {
+                description {
+                    raw
+                }
+                meta_description
+                meta_title
+                title {
+                    raw
+                }
+            }
+        }
+    }
+`
