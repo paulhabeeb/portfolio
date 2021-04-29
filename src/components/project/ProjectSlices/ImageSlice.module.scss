@@ -1,9 +1,24 @@
+@import 'mixins';
+
 .imageSlice {
+    display: flex;
+    flex-direction: column;
+    grid-gap: var(--spacing-double);
     margin: var(--spacing-double) var(--spacing-single);
+
+    @include breakpoint('medium') {
+        flex-direction: row;
+    }
 }
 
 .image {
     box-shadow: 0 0 15px 0 rgba(30, 30, 30, 0.2);
+    cursor: pointer;
+    transition: box-shadow 200ms ease;
+
+    &:hover {
+        box-shadow: 0 0 15px 0 rgba(30, 30, 30, 0.3);
+    }
 }
 
 .figcaption {
@@ -11,4 +26,47 @@
     font-size: var(--font-size-small);
     margin-top: var(--spacing-half);
     text-align: center;
+}
+
+.imageModal {
+    height: 85vh;
+    left: 0;
+    margin: 0 auto;
+    max-width: 85vw;
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    top: 7.5vh;
+    transform: scale(0);
+    transition: transform 100ms ease;
+    z-index: 5;
+
+    &.isZoomed {
+        transform: scale(1);
+    }
+
+    figcaption {
+        display: none;
+    }
+}
+
+.overlay {
+    background-color: rgba(30, 30, 30, 0.7);
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    opacity: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: opacity 300ms ease;
+    z-index: 1;
+
+    &.overlayIsShown {
+        opacity: 1;
+    }
+}
+
+.modalIsOpen {
+    overflow: hidden;
 }
