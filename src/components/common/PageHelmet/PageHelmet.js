@@ -5,11 +5,11 @@ import { Helmet } from 'react-helmet'
 export default function PageHelmet({ description, title, url }) {
     return (
         <Helmet>
-            <html lang='en' />
-
             {/* General tags */}
+            <html lang='en' />
             <title>{title}</title>
             <meta name='description' content={description} />
+            <link rel='stylesheet' href='https://use.typekit.net/nwv5srn.css' />
             <link rel='icon' href='/favicon.png' type='image/png' />
 
             {/* OpenGraph tags */}
