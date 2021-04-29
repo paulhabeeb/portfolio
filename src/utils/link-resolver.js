@@ -11,7 +11,12 @@ export function prismicLink(doc) {
 export function linkResolver(type, element, content, children, index) {
     if (element.data.link_type === 'Web') {
         return (
-            <a href={element.data.url} key={index}>
+            <a
+                href={element.data.url}
+                key={index}
+                target='_blank'
+                rel='noreferrer'
+            >
                 {content}
             </a>
         )

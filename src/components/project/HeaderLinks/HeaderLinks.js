@@ -14,14 +14,14 @@ export default function HeaderLinks({
         <ul className={styles.links}>
             {liveLink.url && (
                 <li>
-                    <a href={liveLink.url}>
+                    <a href={liveLink.url} target='_blank' rel='noreferrer'>
                         {liveButtonText} {String.fromCharCode(8599)}
                     </a>
                 </li>
             )}
             {githubLink.url && (
                 <li>
-                    <a href={githubLink.url}>
+                    <a href={githubLink.url} target='_blank' rel='noreferrer'>
                         {githubButtonText}
                         <GitHubIcon className={styles.icon} />
                     </a>
