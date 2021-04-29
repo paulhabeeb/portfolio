@@ -104,7 +104,7 @@ function InlineImage({ caption, image }) {
     const [coords, setCoords] = useState(null)
 
     const handleOpen = () => {
-        if (/Mobi/i.test(navigator.userAgent)) {
+        if (!/Mobi/i.test(navigator.userAgent)) {
             setIsOpen(true)
             setCoords(imageRef.current.getBoundingClientRect())
         }
