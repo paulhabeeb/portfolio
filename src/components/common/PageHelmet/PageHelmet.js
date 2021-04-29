@@ -10,7 +10,7 @@ export default function PageHelmet({ description, title, url }) {
             {/* General tags */}
             <title>{title}</title>
             <meta name='description' content={description} />
-            <link key='icon' rel='icon' href='/favicon.png' />
+            <link rel='icon' href='/favicon.png' type='image/png' />
 
             {/* OpenGraph tags */}
             <meta
