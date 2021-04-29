@@ -14,7 +14,12 @@ function NavItem({ hasPlainStyling, link, linkText }) {
     if (link.uid) {
         return (
             <li className={className}>
-                <Link to={prismicLink(link)}>{linkText}</Link>
+                <Link
+                    activeClassName={styles.activeLink}
+                    to={prismicLink(link)}
+                >
+                    {linkText}
+                </Link>
             </li>
         )
     }

@@ -12,8 +12,23 @@
     display: inline-block;
     margin-right: var(--spacing-single);
 
-    &.plainLink a {
-        color: var(--color-not-black);
+    a {
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.plainLink a {
+    color: var(--color-not-black);
+
+    &:hover {
         text-decoration: none;
     }
+}
+
+.activeLink {
+    text-decoration: underline !important;
 }
