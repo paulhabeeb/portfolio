@@ -2,6 +2,7 @@ import PropTypes from 'prop-types'
 
 import { Layout, PageHeader } from '@components/common'
 import ProjectList from './ProjectList'
+import styles from './Home.module.scss'
 
 export default function Home({
     data: { body, description, meta_description, meta_title, title },
@@ -9,21 +10,22 @@ export default function Home({
     uid,
 }) {
     return (
-        <Layout showNav={false}>
-            <PageHeader
-                description={description}
-                doc={{
-                    type,
-                    uid,
-                }}
-                metaDescription={meta_description}
-                metaTitle={meta_title}
-                title={title}
-            />
+        <>
+            <div className={styles.container}>
+                <Layout
+                    doc={{ type, uid }}
+                    metaDescription={meta_description}
+                    metaTitle={meta_title}
+                >
+                    <PageHeader description={description} title={title} />
+                </Layout>
+            </div>
             <main>
-                <ProjectList projects={body} />
+                <Layout>
+                    <ProjectList projects={body} />
+                </Layout>
             </main>
-        </Layout>
+        </>
     )
 }
 

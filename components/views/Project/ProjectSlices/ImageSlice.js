@@ -41,7 +41,7 @@ const ImageSliceFigure = forwardRef(({ caption, handleClick, image }, ref) => {
 })
 
 ImageSliceFigure.propTypes = {
-    caption: PropTypes.object,
+    caption: PropTypes.array,
     handleClick: PropTypes.func,
     image: PropTypes.object,
 }
@@ -138,7 +138,7 @@ function InlineImage({ caption, image }) {
 }
 
 InlineImage.propTypes = {
-    caption: PropTypes.object,
+    caption: PropTypes.array,
     image: PropTypes.object,
 }
 

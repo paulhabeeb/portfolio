@@ -12,5 +12,5 @@ export default function BuiltWith({ tools }) {
 }
 
 BuiltWith.propTypes = {
-    tools: PropTypes.object,
+    tools: PropTypes.array,
 }

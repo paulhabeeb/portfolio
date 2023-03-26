@@ -23,17 +23,13 @@ export default function Project({ nav, page }) {
     } = page
 
     return (
-        <Layout nav={nav}>
-            <PageHeader
-                description={description}
-                doc={{
-                    type,
-                    uid,
-                }}
-                metaDescription={meta_description}
-                metaTitle={meta_title}
-                title={name}
-            >
+        <Layout
+            doc={{ type, uid }}
+            metaDescription={meta_description}
+            metaTitle={meta_title}
+            nav={nav}
+        >
+            <PageHeader description={description} title={name}>
                 <HeaderLinks
                     githubButtonText={github_button_text}
                     githubLink={github_link}
@@ -52,6 +48,6 @@ export default function Project({ nav, page }) {
 }
 
 Project.propTypes = {
-    nav: PropTypes.object,
+    nav: PropTypes.array,
     page: PropTypes.object,
 }

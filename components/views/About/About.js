@@ -12,16 +12,13 @@ export default function About({ nav, page }) {
     } = page
 
     return (
-        <Layout nav={nav}>
-            <PageHeader
-                doc={{
-                    type,
-                    uid,
-                }}
-                metaDescription={meta_description}
-                metaTitle={meta_title}
-                title={title}
-            />
+        <Layout
+            doc={{ type, uid }}
+            metaDescription={meta_description}
+            metaTitle={meta_title}
+            nav={nav}
+        >
+            <PageHeader title={title} />
             <main className={styles.main}>
                 <PrismicRichText field={description} />
             </main>
@@ -30,6 +27,6 @@ export default function About({ nav, page }) {
 }
 
 About.propTypes = {
-    nav: PropTypes.object,
+    nav: PropTypes.array,
     page: PropTypes.object,
 }

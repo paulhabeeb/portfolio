@@ -1,24 +1,24 @@
 import PropTypes from 'prop-types'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { linkResolver } from '@utils/link-resolver'
 
 import cn from 'classnames'
 import styles from './Nav.module.scss'
 
 function NavItem({ hasPlainStyling, link, linkText }) {
+    const { asPath } = useRouter()
+    const linkHref = linkResolver(link)
+    const isActive = asPath === linkHref
     const className = cn(styles.navItem, {
         [styles.plainLink]: hasPlainStyling,
+        [styles.activeLink]: isActive,
     })
 
     if (link.uid) {
         return (
             <li className={className}>
-                <Link
-                    activeClassName={styles.activeLink}
-                    href={linkResolver(link)}
-                >
-                    {linkText}
-                </Link>
+                <Link href={linkHref}>{linkText}</Link>
             </li>
         )
     }

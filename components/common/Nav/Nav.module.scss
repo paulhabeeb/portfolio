@@ -1,9 +1,11 @@
 .nav {
+    background-color: var(--color-secondary);
+
     ul {
         font-weight: var(--font-weight-sans-bold);
         margin: 0 auto;
         max-width: 800px;
-        padding: var(--spacing-quarter) var(--spacing-single);
+        padding: var(--spacing-half) var(--spacing-single);
         width: 100%;
     }
 }
@@ -13,6 +15,8 @@
     margin-right: var(--spacing-single);
 
     a {
+        color: var(--color-not-black);
+        font-weight: 400;
         text-decoration: none;
 
         &:hover {
@@ -22,7 +26,7 @@
 }
 
 .plainLink a {
-    color: var(--color-not-black);
+    font-weight: 600;
 
     &:hover {
         text-decoration: none;

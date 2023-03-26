@@ -1,10 +1,14 @@
 .title h1 {
     font-size: var(--font-size-larger);
     font-weight: var(--font-weight-sans-black);
-    margin-bottom: var(--spacing-quarter);
+    margin-bottom: var(--spacing-half);
 }
 
 .description {
     color: var(--color-dark-grey);
     font-size: var(--font-size-medium);
+
+    p {
+        margin-bottom: var(--spacing-half);
+    }
 }

@@ -3,8 +3,9 @@
 }
 
 .title {
-    font-size: var(--font-size-medium);
+    letter-spacing: 3px;
     margin-bottom: var(--spacing-third);
+    text-transform: uppercase;
 }
 
 .project {
@@ -12,6 +13,7 @@
 
     h2 {
         display: inline;
+        font-weight: var(--font-weight-sans-normal);
     }
 
     a {

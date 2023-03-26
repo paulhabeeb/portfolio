@@ -1,25 +1,11 @@
 import PropTypes from 'prop-types'
 import { PrismicRichText } from '@prismicio/react'
-import { linkResolver } from '@utils/link-resolver'
 
-import { PageHelmet } from '@components/common'
 import styles from './PageHeader.module.scss'
 
-export default function PageHeader({
-    children,
-    description,
-    doc,
-    metaDescription,
-    metaTitle,
-    title,
-}) {
+export default function PageHeader({ children, description, title }) {
     return (
         <header>
-            <PageHelmet
-                description={metaDescription}
-                title={metaTitle}
-                url={doc && linkResolver(doc)}
-            />
             <div className={styles.title}>
                 <PrismicRichText field={title} />
             </div>
@@ -35,9 +21,6 @@ export default function PageHeader({
 
 PageHeader.propTypes = {
     children: PropTypes.node,
-    description: PropTypes.object,
-    doc: PropTypes.object,
-    metaDescription: PropTypes.string,
-    metaTitle: PropTypes.string,
-    title: PropTypes.object,
+    description: PropTypes.array,
+    title: PropTypes.array,
 }
