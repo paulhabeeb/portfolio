@@ -19,6 +19,11 @@ export default function Document() {
                 />
 
                 <link
+                    rel='stylesheet'
+                    href='https://use.typekit.net/nwv5srn.css'
+                />
+
+                <link
                     rel='apple-touch-startup-image'
                     media='screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)'
                     href='splash_screens/iPhone_13_mini__iPhone_12_mini__iPhone_11_Pro__iPhone_XS__iPhone_X_portrait.png'
