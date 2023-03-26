@@ -14,7 +14,6 @@ module.exports = {
         config.resolve.alias = {
             ...config.resolve.alias,
             '@components': path.join(__dirname, 'components'),
-            '@images': path.join(__dirname, 'images'),
             '@utils': path.join(__dirname, 'utils'),
         }
 
