@@ -9,7 +9,12 @@ export async function getStaticProps({ preview = false }) {
     const [navData, page, projects] = await Promise.all([
         getNav(preview),
         getByUID(preview, 'page', 'projects'),
-        getAll(preview, 'project'),
+        getAll(preview, 'project', {
+            orderings: {
+                field: 'my.project.name',
+                direction: 'asc',
+            },
+        }),
     ])
 
     return {
