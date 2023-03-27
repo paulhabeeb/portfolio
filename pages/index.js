@@ -7,7 +7,11 @@ export default function HomePage(props) {
 
 export async function getStaticProps({ preview = false }) {
     const page = await getSingleton(preview, 'homepage', {
-        fetchLinks: ['project.description', 'project.name'],
+        fetchLinks: [
+            'project.description',
+            'project.name',
+            'project.thumbnail',
+        ],
     })
 
     return {

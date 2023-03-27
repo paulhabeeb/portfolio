@@ -1,26 +1,40 @@
-.projectList {
+.container {
     margin-top: var(--spacing-double);
 }
 
 .title {
     letter-spacing: 3px;
-    margin-bottom: var(--spacing-third);
+    margin-bottom: var(--spacing-two-thirds);
     text-transform: uppercase;
 }
 
-.project {
-    font-size: var(--font-size-large);
+.projectList {
+    display: grid;
+    grid-gap: var(--spacing-single) var(--spacing-two-thirds);
+    grid-template-columns: repeat(2, 1fr);
+}
 
+.project {
     h2 {
-        display: inline;
-        font-weight: var(--font-weight-sans-normal);
+        font-size: var(--font-size-medium);
     }
 
     a {
         text-decoration: none;
 
         &:hover {
-            text-decoration: underline;
+            text-decoration: underline var(--color-primary) 2px;
+
+            img {
+                opacity: 0.5;
+            }
         }
     }
+}
+
+.projectImage {
+    border: 2px solid var(--color-secondary-dark);
+    border-radius: 3px;
+    margin-bottom: var(--spacing-quarter);
+    transition: opacity 150ms ease;
 }
