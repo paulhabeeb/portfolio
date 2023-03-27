@@ -9,7 +9,10 @@ import styles from './Nav.module.scss'
 function NavItem({ hasPlainStyling, link, linkText }) {
     const { asPath } = useRouter()
     const linkHref = linkResolver(link)
-    const isActive = asPath === linkHref
+    const isActive =
+        asPath === linkHref ||
+        (asPath.includes('/projects/') && linkText === 'Projects')
+
     const className = cn(styles.navItem, {
         [styles.plainLink]: hasPlainStyling,
         [styles.activeLink]: isActive,
