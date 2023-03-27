@@ -1,6 +1,4 @@
-.container {
-    margin-top: var(--spacing-double);
-}
+@import 'mixins';
 
 .title {
     letter-spacing: 3px;
@@ -11,7 +9,10 @@
 .projectList {
     display: grid;
     grid-gap: var(--spacing-single) var(--spacing-two-thirds);
-    grid-template-columns: repeat(2, 1fr);
+
+    @include breakpoint('small') {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .project {

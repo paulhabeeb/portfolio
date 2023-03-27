@@ -31,7 +31,7 @@ ProjectListItem.propTypes = {
 
 export default function ProjectList({ projects }) {
     return (
-        <div className={styles.container}>
+        <div>
             <h2 className={styles.title}>Selected Projects</h2>
             <ul className={styles.projectList}>
                 {projects.map(({ primary: { project } }) => (
