@@ -1,5 +1,6 @@
 .nav {
     background-color: var(--color-secondary);
+    border-bottom: 5px double var(--color-secondary-dark);
 
     ul {
         font-weight: var(--font-weight-sans-bold);
