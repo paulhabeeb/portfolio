@@ -23,7 +23,9 @@
         text-decoration: none;
 
         &:hover {
-            text-decoration: underline var(--color-primary) 2px;
+            text-decoration: underline;
+            text-decoration-color: var(--color-primary);
+            text-decoration-thickness: 2px;
 
             img {
                 opacity: 0.5;

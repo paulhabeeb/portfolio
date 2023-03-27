@@ -5,7 +5,9 @@
 }
 
 .underline h1 {
-    text-decoration: underline var(--color-secondary-dark) 5px;
+    text-decoration: underline;
+    text-decoration-color: var(--color-secondary-dark);
+    text-decoration-thickness: 5px;
 }
 
 .description {

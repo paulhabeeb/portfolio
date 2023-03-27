@@ -6,7 +6,9 @@
         font-size: var(--font-size-large);
         margin-bottom: var(--spacing-single);
         padding-bottom: var(--spacing-quarter);
-        text-decoration: underline var(--color-secondary-dark) 5px;
+        text-decoration: underline;
+        text-decoration-color: var(--color-secondary-dark);
+        text-decoration-thickness: 5px;
     }
 
     h3 {
