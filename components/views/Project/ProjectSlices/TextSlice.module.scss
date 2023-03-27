@@ -2,11 +2,11 @@
     margin-top: var(--spacing-double);
 
     h2 {
-        border-bottom: 5px solid var(--color-light-grey);
         display: inline-block;
         font-size: var(--font-size-large);
         margin-bottom: var(--spacing-single);
         padding-bottom: var(--spacing-quarter);
+        text-decoration: underline var(--color-secondary-dark) 5px;
     }
 
     h3 {
@@ -16,7 +16,7 @@
 
     p {
         font-size: var(--font-size-normal);
-        margin-bottom: var(--spacing-half);
+        margin-bottom: var(--spacing-two-thirds);
     }
 
     p + h2,
