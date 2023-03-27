@@ -17,7 +17,11 @@ export default function Home({
                     metaDescription={meta_description}
                     metaTitle={meta_title}
                 >
-                    <PageHeader description={description} title={title} />
+                    <PageHeader
+                        description={description}
+                        title={title}
+                        underlineTitle={true}
+                    />
                 </Layout>
             </div>
             <main>

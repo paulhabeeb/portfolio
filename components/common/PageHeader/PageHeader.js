@@ -1,12 +1,22 @@
 import PropTypes from 'prop-types'
 import { PrismicRichText } from '@prismicio/react'
+import cn from 'classnames'
 
 import styles from './PageHeader.module.scss'
 
-export default function PageHeader({ children, description, title }) {
+export default function PageHeader({
+    children,
+    description,
+    title,
+    underlineTitle,
+}) {
+    const titleClass = cn(styles.title, {
+        [styles.underline]: underlineTitle,
+    })
+
     return (
         <header>
-            <div className={styles.title}>
+            <div className={titleClass}>
                 <PrismicRichText field={title} />
             </div>
             {description && (
@@ -19,8 +29,13 @@ export default function PageHeader({ children, description, title }) {
     )
 }
 
+PageHeader.defaultProps = {
+    underlineTitle: false,
+}
+
 PageHeader.propTypes = {
     children: PropTypes.node,
     description: PropTypes.array,
     title: PropTypes.array,
+    underlineTitle: PropTypes.bool,
 }

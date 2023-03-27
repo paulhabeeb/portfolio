@@ -4,6 +4,10 @@
     margin-bottom: var(--spacing-half);
 }
 
+.underline h1 {
+    text-decoration: underline var(--color-secondary-dark) 5px;
+}
+
 .description {
     color: var(--color-dark-grey);
     font-size: var(--font-size-medium);
