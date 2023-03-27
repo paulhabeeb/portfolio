@@ -5,6 +5,7 @@
 }
 
 .underline h1 {
+    margin-bottom: var(--spacing-single);
     text-decoration: underline;
     text-decoration-color: var(--color-secondary-dark);
     text-decoration-thickness: 5px;
@@ -13,4 +14,8 @@
 .description {
     color: var(--color-dark-grey);
     font-size: var(--font-size-medium);
+
+    p + p {
+        margin-top: var(--spacing-single);
+    }
 }
