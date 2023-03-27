@@ -14,10 +14,15 @@ export async function getStaticProps({ preview = false }) {
         ],
     })
 
+    const projects = page.data.body.map(project => {
+        return project.primary.project
+    })
+
     return {
         props: {
             ...page,
             preview,
+            projects,
         },
     }
 }

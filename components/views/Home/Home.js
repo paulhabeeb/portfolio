@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types'
 
-import { Container, Layout, PageHeader } from '@components/common'
-import ProjectList from './ProjectList'
+import { Container, Layout, PageHeader, ProjectList } from '@components/common'
 import styles from './Home.module.scss'
 
 export default function Home({
-    data: { body, description, meta_description, meta_title, title },
+    data: { description, meta_description, meta_title, title },
+    projects,
     type,
     uid,
 }) {
@@ -26,7 +26,7 @@ export default function Home({
             </div>
             <main>
                 <Layout>
-                    <ProjectList projects={body} />
+                    <ProjectList projects={projects} />
                 </Layout>
             </main>
         </>
@@ -35,6 +35,7 @@ export default function Home({
 
 Home.propTypes = {
     data: PropTypes.object,
+    projects: PropTypes.array,
     type: PropTypes.string,
     uid: PropTypes.string,
 }

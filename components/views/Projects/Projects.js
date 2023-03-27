@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
-import { Container, PageHeader } from '@components/common'
+import { Container, PageHeader, ProjectList } from '@components/common'
 
-export default function Project({ nav, page }) {
+export default function Projects({ nav, page, projects }) {
     const {
         data: { description, meta_description, meta_title, title },
         type,
@@ -17,13 +17,16 @@ export default function Project({ nav, page }) {
         >
             <PageHeader description={description} title={title} />
             <main>
-                <article>{/* <ProjectSlices slices={body} /> */}</article>
+                <article>
+                    <ProjectList projects={projects} showDescription={true} />
+                </article>
             </main>
         </Container>
     )
 }
 
-Project.propTypes = {
+Projects.propTypes = {
     nav: PropTypes.array,
     page: PropTypes.object,
+    projects: PropTypes.array,
 }
