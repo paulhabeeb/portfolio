@@ -21,11 +21,12 @@
 }
 
 .projectLink {
+    color: var(--color-not-black);
     text-decoration: none;
 
     &:hover {
         text-decoration: underline;
-        text-decoration-color: var(--color-primary);
+        text-decoration-color: var(--color-secondary-dark);
         text-decoration-thickness: 2px;
 
         img {
@@ -52,12 +53,12 @@
             flex-direction: column;
 
             @include breakpoint('small') {
+                align-items: center;
                 flex-direction: row;
             }
         }
 
         .projectLink {
-            color: var(--color-not-black);
             font-weight: var(--font-weight-sans-normal);
 
             &:hover {
