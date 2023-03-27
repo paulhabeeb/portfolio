@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { Layout, PageHeader } from '@components/common'
+import { Container, PageHeader } from '@components/common'
 import BuiltWith from './BuiltWith'
 import HeaderLinks from './HeaderLinks'
 import ProjectSlices from './ProjectSlices'
@@ -23,7 +23,7 @@ export default function Project({ nav, page }) {
     } = page
 
     return (
-        <Layout
+        <Container
             doc={{ type, uid }}
             metaDescription={meta_description}
             metaTitle={meta_title}
@@ -43,7 +43,7 @@ export default function Project({ nav, page }) {
                     <ProjectSlices slices={body} />
                 </article>
             </main>
-        </Layout>
+        </Container>
     )
 }
 

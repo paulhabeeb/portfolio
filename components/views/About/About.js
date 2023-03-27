@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import { PrismicRichText } from '@prismicio/react'
 
-import { Layout, PageHeader } from '@components/common'
+import { Container, PageHeader } from '@components/common'
 import styles from './About.module.scss'
 
 export default function About({ nav, page }) {
@@ -12,7 +12,7 @@ export default function About({ nav, page }) {
     } = page
 
     return (
-        <Layout
+        <Container
             doc={{ type, uid }}
             metaDescription={meta_description}
             metaTitle={meta_title}
@@ -22,7 +22,7 @@ export default function About({ nav, page }) {
             <main className={styles.main}>
                 <PrismicRichText field={description} />
             </main>
-        </Layout>
+        </Container>
     )
 }
 

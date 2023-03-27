@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
-import { Layout, PageHeader } from '@components/common'
+import { Container, Layout, PageHeader } from '@components/common'
 import ProjectList from './ProjectList'
 import styles from './Home.module.scss'
 
@@ -12,7 +12,7 @@ export default function Home({
     return (
         <>
             <div className={styles.container}>
-                <Layout
+                <Container
                     doc={{ type, uid }}
                     metaDescription={meta_description}
                     metaTitle={meta_title}
@@ -22,7 +22,7 @@ export default function Home({
                         title={title}
                         underlineTitle={true}
                     />
-                </Layout>
+                </Container>
             </div>
             <main>
                 <Layout>
