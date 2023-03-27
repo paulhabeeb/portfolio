@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
-import { GitHub } from '@components/icons'
+import { GitHub, NewTab } from '@components/icons'
 import styles from './HeaderLinks.module.scss'
 
 export default function HeaderLinks({
@@ -14,7 +14,7 @@ export default function HeaderLinks({
             {liveLink.url && (
                 <li>
                     <a href={liveLink.url} target='_blank' rel='noreferrer'>
-                        {liveButtonText} {String.fromCharCode(8599)}
+                        {liveButtonText} <NewTab styles={styles.icon} />
                     </a>
                 </li>
             )}
