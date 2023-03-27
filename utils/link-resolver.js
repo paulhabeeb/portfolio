@@ -2,7 +2,7 @@ export function linkResolver(doc) {
     if (doc.type === 'project') {
         return `/projects/${doc.uid}`
     }
-    if (doc.type === 'about') {
+    if (doc.type === 'page') {
         return `/${doc.uid}`
     }
 

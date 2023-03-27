@@ -1,4 +1,4 @@
-import { getNav, getSingleton } from '@utils/prismic'
+import { getNav, getByUID } from '@utils/prismic'
 import { NotFound } from '@components/views'
 
 export default function NotFoundPage(props) {
@@ -6,8 +6,10 @@ export default function NotFoundPage(props) {
 }
 
 export async function getStaticProps({ preview = false }) {
-    const navData = await getNav(preview)
-    const pageData = await getSingleton(preview, 'page_not_found')
+    const [navData, pageData] = await Promise.all([
+        getNav(preview),
+        getByUID(preview, 'page', 'page-not-found'),
+    ])
 
     return {
         props: {

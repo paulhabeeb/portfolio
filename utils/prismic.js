@@ -20,6 +20,6 @@ export async function getAll(previewData, postType, params) {
     return await Client(previewData?.ref).getAllByType(postType, params)
 }
 
-export async function getProject(previewData, documentType, uid, params) {
+export async function getByUID(previewData, documentType, uid, params) {
     return await Client(previewData?.ref).getByUID(documentType, uid, params)
 }

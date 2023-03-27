@@ -1,4 +1,4 @@
-import { getAll, getNav, getProject } from '@utils/prismic'
+import { getAll, getNav, getByUID } from '@utils/prismic'
 import { Project } from '@components/views'
 
 export default function ProjectPage(props) {
@@ -6,8 +6,10 @@ export default function ProjectPage(props) {
 }
 
 export async function getStaticProps({ preview = false, params }) {
-    const navData = await getNav(preview)
-    const page = await getProject(preview, 'project', params.uid)
+    const [navData, page] = await Promise.all([
+        getNav(preview),
+        getByUID(preview, 'project', params.uid),
+    ])
 
     return {
         props: {
