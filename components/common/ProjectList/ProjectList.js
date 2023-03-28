@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types'
+import Image from 'next/image'
 import Link from 'next/link'
-import cn from 'classnames'
 import { PrismicText } from '@prismicio/react'
+import cn from 'classnames'
 import { linkResolver } from '@utils/link-resolver'
 import styles from './ProjectList.module.scss'
 
@@ -20,7 +21,7 @@ function ProjectListItem({
         <li className={projectClass}>
             <Link className={styles.projectLink} href={url}>
                 <div className={styles.projectWrapper}>
-                    <img
+                    <Image
                         alt={thumbnail?.alt}
                         className={styles.projectImage}
                         height={thumbnail?.small?.dimensions?.height}

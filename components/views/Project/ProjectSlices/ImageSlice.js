@@ -1,5 +1,6 @@
 import { createRef, forwardRef, useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
+import Image from 'next/image'
 import { Helmet } from 'react-helmet'
 import { PrismicRichText } from '@prismicio/react'
 
@@ -7,15 +8,6 @@ import cn from 'classnames'
 import styles from './ImageSlice.module.scss'
 
 const ImageSliceFigure = forwardRef(({ caption, handleClick, image }, ref) => {
-    const srcSet = `
-        ${image.xs.url} ${image.xs.dimensions.width}w,
-        ${image.s.url} ${image.s.dimensions.width}w,
-        ${image.m.url} ${image.m.dimensions.width}w,
-        ${image.l.url} ${image.l.dimensions.width}w,
-        ${image.xl.url} ${image.xl.dimensions.width}w,
-        ${image.url} ${image.dimensions.width}w
-    `
-
     return (
         <figure>
             <div
@@ -23,13 +15,12 @@ const ImageSliceFigure = forwardRef(({ caption, handleClick, image }, ref) => {
                 onKeyPress={handleClick}
                 role='presentation'
             >
-                <img
+                <Image
                     alt={image.alt}
                     className={styles.image}
                     height={image.l.dimensions.height}
                     ref={ref}
                     src={image.l.url}
-                    srcSet={srcSet}
                     width={image.l.dimensions.width}
                 />
             </div>
